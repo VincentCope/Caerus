@@ -12,10 +12,12 @@
   float: left
   height: header-height
   line-height: header-height
+  @media mq-mobile
+    display: none
 
 $logo-text
   text-decoration: none
-  color: #ff5722
+  color: color-default
   font-weight: 300
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3)
 
@@ -41,11 +43,11 @@ $logo-text
 $nav-link  
   float: left
   height: header-height
-  line-height: header-height
-  padding: 0 10px
-  font-size: subtitle-size
-  color: #ff5722
-  opacity: 0.6
+  line-height: 53px
+  font-size: 18px
+  padding:0 10px;
+  color: color-default
+  opacity: 0.8
   text-decoration: none
   text-shadow: 0 1px rgba(0, 0, 0, 0.2)
   transition: opacity 0.2s
@@ -54,12 +56,21 @@ $nav-link
     opacity: 1
 
 .nav-icon
-  @extend $nav-link
+  height: header-height
+  line-height: 53px
+  font-size: 18px
+  color: color-default
+  opacity: 0.8
+  text-decoration: none
+  text-shadow: 0 1px rgba(0, 0, 0, 0.2)
+  transition: opacity 0.2s
+  display: block
   font-family: font-icon
   text-align: center
-  font-size: font-size
   position: relative
   cursor: pointer
+  &:hover
+    opacity: 1
 
 .main-nav-link
   @extend $nav-link
@@ -74,10 +85,25 @@ $nav-link
     content: "\f0c9"
   @media mq-mobile
     display: block
+    margin-left: -10px
 
 #sub-nav
-  @extend $nav-link
   float: right
+  height: header-height
+  line-height: 53px
+  font-size: 18px
+  color: color-default
+  opacity: 0.8
+  text-decoration: none
+  text-shadow: 0 1px rgba(0, 0, 0, 0.2)
+  transition: opacity 0.2s
+  display: block
+  font-family: font-icon
+  text-align: center
+  position: relative
+  cursor: pointer
+  &:hover
+    opacity: 1
 
 #nav-rss-link
   &:before
@@ -110,7 +136,7 @@ $nav-link
   background: #fff
   padding: 5px 15px
   border-radius: 15px
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3)
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05)
 
 .search-form-input
   border: none
