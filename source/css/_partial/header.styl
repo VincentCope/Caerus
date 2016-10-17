@@ -1,56 +1,28 @@
 #header
-  height: banner-height
+  height: header-height
   position: relative
-  border-bottom: 1px solid color-border
-  &:before, &:after
-    content: ""
-    position: absolute
-    left: 0
-    right: 0
-    height: 40px
-  &:before
-    top: 0
-    background: linear-gradient(rgba(0, 0, 0, 0.2), transparent)
-  &:after
-    bottom: 0
-    background: linear-gradient(transparent, rgba(0, 0, 0, 0.2))
+  background-color: color-header-background
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 
 #header-outer
   height: 100%
   position: relative
 
-#header-inner
-  position: relative
-  overflow: hidden
-
-#banner
-  position: absolute
-  top: 0
-  left: 0
-  width: 100%
-  height: 100%
-  background: url(banner-url) center #000
-  background-size: cover
-  z-index: -1
-
-#header-title
-  text-align: center
-  height: logo-size
-  position: absolute
-  top: 50%
-  left: 0
-  margin-top: logo-size * -0.5
+#logo-wrap
+  float: left
+  height: header-height
+  line-height: header-height
 
 $logo-text
   text-decoration: none
-  color: #fff
+  color: #ff5722
   font-weight: 300
   text-shadow: 0 1px 4px rgba(0, 0, 0, 0.3)
 
 #logo
   @extend $logo-text
   font-size: logo-size
-  line-height: logo-size
+  line-height: header-height
   letter-spacing: 2px
 
 #subtitle
@@ -64,17 +36,20 @@ $logo-text
 
 #main-nav
   float: left
-  margin-left: -15px
+  margin-left: 15px
 
-$nav-link
+$nav-link  
   float: left
-  color: #fff
+  height: header-height
+  line-height: header-height
+  padding: 0 10px
+  font-size: subtitle-size
+  color: #ff5722
   opacity: 0.6
   text-decoration: none
   text-shadow: 0 1px rgba(0, 0, 0, 0.2)
   transition: opacity 0.2s
   display: block
-  padding: 20px 15px
   &:hover
     opacity: 1
 
@@ -83,9 +58,6 @@ $nav-link
   font-family: font-icon
   text-align: center
   font-size: font-size
-  width: font-size
-  height: font-size
-  padding: 20px 15px
   position: relative
   cursor: pointer
 
@@ -104,8 +76,8 @@ $nav-link
     display: block
 
 #sub-nav
+  @extend $nav-link
   float: right
-  margin-right: -15px
 
 #nav-rss-link
   &:before
