@@ -41,10 +41,10 @@ $logo-text
   margin-left: 15px
 
 $nav-link  
-  float: left
   height: header-height
-  line-height: 53px
+  line-height: header-height
   font-size: 18px
+  text-align: center
   padding:0 10px;
   color: color-default
   opacity: 0.8
@@ -56,17 +56,9 @@ $nav-link
     opacity: 1
 
 .nav-icon
-  height: header-height
-  line-height: 53px
-  font-size: 18px
-  color: color-default
-  opacity: 0.8
-  text-decoration: none
-  text-shadow: 0 1px rgba(0, 0, 0, 0.2)
-  transition: opacity 0.2s
-  display: block
+  @extend $nav-link
+  float: left
   font-family: font-icon
-  text-align: center
   position: relative
   cursor: pointer
   &:hover
@@ -74,6 +66,7 @@ $nav-link
 
 .main-nav-link
   @extend $nav-link
+  float: left
   font-weight: 300
   letter-spacing: 1px
   @media mq-mobile
@@ -88,16 +81,8 @@ $nav-link
     margin-left: -10px
 
 #sub-nav
+  @extend $nav-link
   float: right
-  height: header-height
-  line-height: 53px
-  font-size: 18px
-  color: color-default
-  opacity: 0.8
-  text-decoration: none
-  text-shadow: 0 1px rgba(0, 0, 0, 0.2)
-  transition: opacity 0.2s
-  display: block
   font-family: font-icon
   text-align: center
   position: relative
