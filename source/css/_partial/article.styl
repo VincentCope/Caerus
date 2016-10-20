@@ -11,6 +11,13 @@
 .article-date
   @extend $block-caption
   float: left
+  color: color-default
+
+.fa-clock-o
+  @extend $block-caption
+  float: left
+  margin: 0 5px
+  color: color-default
 
 .article-category
   float: left
@@ -40,7 +47,7 @@
   line-height: line-height-title
   transition: color 0.2s
   a&:hover
-    color: color-link
+    color: color-main
 
 .article-entry
   @extend $base-style
@@ -129,17 +136,21 @@
   display: inline-block
   line-height: 1em
   padding: 10px 15px
-  border: 1px solid #ddd
+  border: 1px solid color-main
   border-radius: 15px
   background: color-background
-  color: color-grey
+  color: color-main
   text-shadow: 0 1px #fff
   text-decoration: none
+  transition: all 0.2s
   &:hover
-    background: color-link
+    background: color-main
     color: #fff
     text-decoration: none
-    text-shadow: 0 1px darken(color-link, 20%)
+  &:active
+    background: color-main
+    color: #fff
+    text-decoration: none
 
 .article-footer
   clearfix()
@@ -149,7 +160,6 @@
   padding-top: line-height
   margin: 0 article-padding article-padding
   a
-    color: color-grey
     text-decoration: none
     &:hover
       color: color-default
@@ -159,6 +169,10 @@
   margin-right: 10px
 
 .article-tag-list-link
+  background-color: color-main
+  color: #fff
+  padding: 5px
+  border-radius: 3px
   &:before
     content: "#"
 
@@ -170,6 +184,7 @@
     padding-right: 8px
 
 .article-share-link
+  color: color-grey
   cursor: pointer
   float: right
   margin-left: 20px

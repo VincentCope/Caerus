@@ -19,7 +19,6 @@ $logo-text
   text-decoration: none
   color: color-default
   font-weight: 600
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2)
 
 #logo
   @extend $logo-text
@@ -47,11 +46,11 @@ $nav-link
   font-size: 18px
   text-align: center
   padding:0 10px;
-  opacity: 0.8
-  transition: opacity 0.2s
+  transition: color 0.2s
   display: block
+  cursor: pointer
   &:hover
-    opacity: 1
+    color: color-main
 
 .nav-icon
   @extend $nav-link
