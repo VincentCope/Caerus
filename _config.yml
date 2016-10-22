@@ -14,11 +14,11 @@ fancybox: true
 # Sidebar
 sidebar: right
 widgets:
+- recent_posts
 - category
+- archive
 - tag
 - tagcloud
-- archive
-- recent_posts
 
 # Miscellaneous
 google_analytics:

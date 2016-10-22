@@ -1,6 +1,13 @@
 #sidebar
   @media mq-normal
     column(sidebar-column)
+  @media mq-mobile
+    .recent-page,.archive,.tags
+      display: none
+    .cloud
+      text-align: center
+      h3
+        text-indent: 0px
 
 .widget-wrap
   margin-bottom: block-margin
