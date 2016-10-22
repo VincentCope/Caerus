@@ -1,5 +1,6 @@
 .article
-  margin: block-margin 0
+  margin-bottom: block-margin
+  border-bottom: 1px dashed #f1f1f1
 
 .article-inner
   overflow: hidden
@@ -11,13 +12,13 @@
 .article-date
   @extend $block-caption
   float: left
-  color: color-default
+  color: color-grey
 
 .fa-clock-o
   @extend $block-caption
   float: left
   margin: 0 5px
-  color: color-default
+  color: color-grey
 
 .article-category
   float: left
@@ -34,15 +35,13 @@
 
 .article-header
   padding: article-padding 0
-  margin-bottom: 10px
   overflow: hidden
   h1
     float:left
 
 .article-title
   text-decoration: none
-  font-size: 2em
-  font-weight: bold
+  font-size: 1.8em
   color: color-default
   line-height: line-height-title
   transition: color 0.2s
@@ -135,12 +134,10 @@
 .article-more-link a
   display: inline-block
   line-height: 1em
-  padding: 10px 15px
+  padding: 8px 12px
   border: 1px solid color-main
-  border-radius: 15px
   background: color-background
   color: color-main
-  text-shadow: 0 1px #fff
   text-decoration: none
   transition: all 0.2s
   &:hover
@@ -156,23 +153,26 @@
   clearfix()
   font-size: 0.85em
   line-height: line-height
-  border-top: 1px solid color-border
-  padding-top: line-height
-  margin: 0 article-padding article-padding
   a
     text-decoration: none
+    color: #ddd
     &:hover
       color: color-default
+
+.article-tag-list
+  overflow: hidden
+  float: left
+  margin-left: 10px
 
 .article-tag-list-item
   float: left
   margin-right: 10px
 
 .article-tag-list-link
-  background-color: color-main
-  color: #fff
-  padding: 5px
-  border-radius: 3px
+  color: color-main
+  height: 2em
+  line-height: 2em
+  text-decoration: none
   &:before
     content: "#"
 
@@ -184,10 +184,8 @@
     padding-right: 8px
 
 .article-share-link
-  color: color-grey
   cursor: pointer
-  float: right
-  margin-left: 20px
+  float: left
   &:before
     content: "\f064"
     font-family: font-icon

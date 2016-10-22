@@ -1,24 +1,22 @@
 #header
-  height: header-height
   position: relative
-  background-color: color-header-background
+  background-color: color-main
   box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  margin-bottom: block-margin
 
 #header-outer
   height: 100%
   position: relative
+  text-align: center
 
 #logo-wrap
-  float: left
-  height: header-height
-  line-height: header-height
+  margin-top: 50px
   @media mq-mobile
     display: none
 
 $logo-text
   text-decoration: none
-  color: color-default
-  font-weight: 600
+  color: color-header-default
 
 #logo
   @extend $logo-text
@@ -31,13 +29,12 @@ $logo-text
   font-size: subtitle-size
   line-height: subtitle-size
   letter-spacing: 1px
-
-#subtitle-wrap
-  margin-top: subtitle-size
+  margin-bottom: 20px
+  @media mq-mobile
+    display: none
 
 #main-nav
   float: left
-  margin-left: 15px
 
 $nav-link
   @extend $logo-text  
@@ -45,12 +42,11 @@ $nav-link
   line-height: header-height
   font-size: 18px
   text-align: center
-  padding:0 10px;
   transition: color 0.2s
   display: block
   cursor: pointer
   &:hover
-    color: color-main
+    color: color-default
 
 .nav-icon
   @extend $nav-link
@@ -63,6 +59,7 @@ $nav-link
 
 .main-nav-link
   @extend $nav-link
+  padding: 0 10px
   float: left
   letter-spacing: 1px
   @media mq-mobile
@@ -74,10 +71,8 @@ $nav-link
     content: "\f0c9"
   @media mq-mobile
     display: block
-    margin-left: -10px
 
 #sub-nav
-  @extend $nav-link
   float: right
   font-family: font-icon
   text-align: center
@@ -96,10 +91,10 @@ $nav-link
 
 #search-form-wrap
   position: absolute
-  top: 15px
-  width: 150px
+  bottom: 15px
+  width: 200px
   height: 30px
-  right: -150px
+  right: -200px
   opacity: 0
   transition: 0.2s ease-out
   &.on
