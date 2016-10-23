@@ -107,31 +107,20 @@
   }
 
   // Mobile nav
-  var $container = $('#container'),
-    isMobileNavAnim = false,
-    mobileNavAnimDuration = 200;
-
-  var startMobileNavAnim = function(){
-    isMobileNavAnim = true;
-  };
-
-  var stopMobileNavAnim = function(){
-    setTimeout(function(){
-      isMobileNavAnim = false;
-    }, mobileNavAnimDuration);
-  }
-
-  $('#main-nav-toggle').on('click', function(){
-    if (isMobileNavAnim) return;
-
-    startMobileNavAnim();
-    $container.toggleClass('mobile-nav-on');
-    stopMobileNavAnim();
+  var nav = $('#mobile-nav');
+  $('#main-nav-toggle').on('click', function(event){
+    if (nav.css('height') === '0px'){
+      nav.animate({'height':'245px'});
+    } else {
+      nav.animate({'height':'0px'});
+    }
+    return false;
   });
 
-  $('#wrap').on('click', function(){
-    if (isMobileNavAnim || !$container.hasClass('mobile-nav-on')) return;
-
-    $container.removeClass('mobile-nav-on');
+  $('#header').on('click',function (event) {
+    nav.animate({'height':'0px'});
+  });
+  $('.outer').on('click',function (event) {
+    nav.animate({'height':'0px'});
   });
 })(jQuery);

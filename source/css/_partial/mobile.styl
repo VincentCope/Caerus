@@ -1,12 +1,13 @@
 @media mq-mobile
   #mobile-nav
-    position: absolute
-    top: 0
-    left: 0
-    width: mobile-nav-width
-    height: 100%
+    display: block
+    overflow: hidden
+    height: 0px
     background: color-mobile-nav-background
-    border-right: 1px solid #fff
+
+@media mq-normal
+  #mobile-nav
+    display: none
 
 @media mq-mobile
   .mobile-nav-link

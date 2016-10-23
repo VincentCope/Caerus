@@ -22,10 +22,6 @@ input, button
        url(font-icon-path + ".ttf?v=#" + font-icon-version) format("truetype"),
        url(font-icon-path + ".svg#fontawesomeregular?v=#" + font-icon-version) format("svg")
 
-html, body, #container
-  height: 100%
-  overflow-x: hidden
-
 body
   background: color-background
   font: font-size font-sans
@@ -56,16 +52,8 @@ body
   overflow: hidden
 
 #wrap
-  height: 100%
   width: 100%
-  position: absolute
-  top: 0
-  left: 0
-  transition: 0.2s ease-out
-  z-index: 1
-  background: color-background
-  .mobile-nav-on &
-    left: mobile-nav-width
+  overflow: hidden
 
 if sidebar and sidebar isnt bottom
   #main
