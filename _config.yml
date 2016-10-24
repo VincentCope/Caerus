@@ -17,8 +17,9 @@ widgets:
 - recent_posts
 - category
 - archive
-- tag
+#- tag
 - tagcloud
+- links
 
 # Miscellaneous
 google_analytics:
@@ -27,3 +28,5 @@ twitter:
 google_plus:
 fb_admins:
 fb_app_id:
+links:
+  Soyaine's Blog: http://soyaine.github.io
