@@ -2,28 +2,11 @@
 
 A simple and beautiful theme for [Hexo].
 
-- [Preview](http://hexo.io/hexo-theme-landscape/)
+- [Preview](http://txliang.com/)
 
 ## Installation
 
-### Install
 
-``` bash
-$ git clone https://github.com/VincentCope/Caerus.git
-```
-
-**Landscape requires Hexo 2.4 and above.**
-
-### Enable
-
-Modify `theme` setting in `_config.yml` to `Caerus`.
-
-### Update
-
-``` bash
-cd themes/landscape
-git pull
-```
 
 ## Configuration
 

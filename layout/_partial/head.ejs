@@ -19,8 +19,9 @@
     title = 'Tag: ' + page.tag;
   }
   %>
-  <title><% if (title){ %><%= title %> | <% } %><%= config.title %></title>
+  <title><% if (title) { %><%= title %> | <% } %><%= config.title %> - 野生前端，记录学习和生活</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="keywords" content="西良同学，西良 前端, xiliang, txliang.com, 西良同学的博客, 前端开发, Web开发, HTML CSS JavaScript, 野生程序员">
   <%- open_graph({twitter_id: theme.twitter, google_plus: theme.google_plus, fb_admins: theme.fb_admins, fb_app_id: theme.fb_app_id}) %>
   <% if (theme.rss){ %>
     <link rel="alternative" href="<%- theme.rss %>" title="<%= config.title %>" type="application/atom+xml">
