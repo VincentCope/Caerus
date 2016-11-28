@@ -1,25 +1,37 @@
-<header id="header">
-  <div id="header-outer" class="outer">
-      <h1 id="logo-wrap">
+<header>
+  <div class="container-fluid head-wrap">
+    <div class="navwrap">
+      <h1 class="site-title">
         <a href="<%- url_for() %>" id="logo"><%= config.title %></a>
       </h1>
-      <% if (config.subtitle){ %>
-        <h2 id="subtitle"><%= config.subtitle %></h2>
-      <% } %>
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
+      <button id="mobile-btn">
+          <span></span>
+          <span></span>
+          <span></span>
+      </button>
+      <ul class="main-nav">
         <% for (var i in theme.menu){ %>
-          <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+          <li><a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
         <% } %>
-      </nav>
-      <nav id="sub-nav">
-        <% if (theme.rss){ %>
-          <a id="nav-rss-link" class="nav-icon" href="<%- theme.rss %>" title="RSS Feed"></a>
+      </ul>
+    </div>
+    <div id="mobile-nav" style="height:0px;">
+      <ul>
+        <% for (var i in theme.menu){ %>
+          <li><a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
         <% } %>
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <%- search_form({button: '&#xF002;'}) %>
-      </div>
+      </ul>
+    </div>
   </div>
 </header>
+
+<section>
+  <div class="banner-wrap">
+    <div class="container banner-center">
+      <% if (config.subtitle){ %>
+        <h2><%= config.subtitle %></h2>
+        <p><%= config.says %></p>
+      <% } %>
+    </div>
+  </div>
+</section>

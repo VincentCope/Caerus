@@ -1,4 +1,23 @@
 (function($){
+  // Mobile nav
+  var nav = $('#mobile-nav');
+  $('#mobile-btn').on('click', function(event){
+    if (nav.css('height') === '0px'){
+      nav.animate({'height':'160px'});
+    } else {
+      nav.animate({'height':'0px'});
+    }
+    return false;
+  });
+
+  $(document).on('click',function (event) {
+    if (nav.css('height') !== '0px'){
+      nav.animate({'height':'0px'});
+    }
+  });
+
+
+
   // Search
   var $searchWrap = $('#search-form-wrap'),
     isSearchAnim = false,
@@ -106,21 +125,4 @@
     $('.fancybox').fancybox();
   }
 
-  // Mobile nav
-  var nav = $('#mobile-nav');
-  $('#main-nav-toggle').on('click', function(event){
-    if (nav.css('height') === '0px'){
-      nav.animate({'height':'245px'});
-    } else {
-      nav.animate({'height':'0px'});
-    }
-    return false;
-  });
-
-  $('#header').on('click',function (event) {
-    nav.animate({'height':'0px'});
-  });
-  $('.outer').on('click',function (event) {
-    nav.animate({'height':'0px'});
-  });
 })(jQuery);

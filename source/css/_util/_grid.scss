@@ -1,0 +1,68 @@
+.container{
+	padding-left: $cw / 2;
+	padding-right: $cw / 2;
+	margin-left: auto;
+	margin-right: auto;
+	@include clearfix;
+}
+@media screen and (min-width:768px) {
+    .container{
+        width: $small-width - $cw;
+    }
+}
+@media screen and (min-width:1024px) {
+    .container{
+        width: $middle-width - $cw;
+    }
+}
+@media screen and (min-width:1200px) {
+    .container{
+        width: $big-width - $cw;
+    }
+}
+
+.container-fluid{
+	padding-left: $cw / 2;
+	padding-right: $cw / 2;
+	@include clearfix;
+}
+
+.row{
+	margin-left: -$cw / 2;
+	margin-right: -$cw / 2;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flexbox;
+	display: flex;
+	overflow: hidden;
+	@media screen and (max-width: 767px) {
+		display: block;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	@include clearfix;
+}
+
+@for $i from 1 through $n {
+	.col#{$i} {
+		width: $unit * $i + ($gutter * ($i - 1));
+	}
+	.offset#{$i} {
+		margin-left: $unit * $i + ($gutter * ($i + 1));
+	}
+}
+.col1,.col2,.col3,.col4,.col5,.col6,.col7,.col8,.col9,.col10,.col11,.col12{
+	margin-left: $gutter / 2;
+	margin-right: $gutter / 2;
+	display:block;
+	float:left;
+	flex: 0 0 auto;
+	@media screen and (max-width: 767px) {
+		width: 100%;
+		margin-left: 0;
+		margin-right: 0;
+	}
+	@include clearfix;
+}

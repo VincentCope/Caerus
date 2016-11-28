@@ -1,0 +1,19 @@
+.footer-wrap{
+	background-color: $color-main;
+	padding-top:5px;
+	padding-bottom:5px;
+}
+.footer-wrap p{
+	margin:0;
+	text-align: center;
+	font-size:14px;
+	color:#fff;
+	line-height: 20px;
+}
+.footer-wrap p a{
+	color:#fff;
+	text-decoration: none;
+}
+.footer-wrap p a:hover{
+	text-decoration: underline;
+}

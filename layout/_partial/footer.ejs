@@ -1,11 +1,11 @@
-<footer id="footer">
+<footer>
   <% if (theme.sidebar === 'bottom'){ %>
     <%- partial('_partial/sidebar') %>
   <% } %>
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
-      <a href="https://github.com/VincentCope/Caerus" taget="_blank">Caerus</a> | Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
+  <div class="footer-wrap">
+      <p>&copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %></p>
+      <p>
+      	<a href="https://github.com/VincentCope/Caerus" taget="_blank">Caerus</a> | Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      </p>
   </div>
 </footer>

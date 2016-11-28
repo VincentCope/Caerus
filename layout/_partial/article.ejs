@@ -7,13 +7,12 @@
       </header>
     <% } %>
     <div class="article-meta">
-    <i class="fa fa-clock-o" aria-hidden="true"></i>
-    <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
-    <%- partial('post/category') %>
-    <% if (post.comments && config.disqus_shortname){ %>
+      <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+      <%- partial('post/category') %>
+      <% if (post.comments && config.disqus_shortname){ %>
         <a href="<%- post.permalink %>#disqus_thread" class="article-comment-link">Comments</a>
-    <% } %>
-    <%- partial('post/tag') %>
+      <% } %>
+      <%- partial('post/tag') %>
     </div>
     <div class="article-entry" itemprop="articleBody">
       <% if (post.excerpt && index){ %>
@@ -27,9 +26,6 @@
         <%- post.content %>
       <% } %>
     </div>
-    <footer class="article-footer">
-      <a data-url="<%- post.permalink %>" data-id="<%= post._id %>" class="article-share-link">Share</a>
-    </footer>
   </div>
   <% if (!index){ %>
     <%- partial('post/nav') %>

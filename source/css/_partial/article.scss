@@ -1,0 +1,163 @@
+#main{
+	margin-top:20px;
+	@media screen and (max-width:767px) {
+		margin-top: 10px;
+	}
+}
+.article-type-post{
+	margin-bottom:20px;
+}
+.article-header{
+	h1{
+		margin: 0;
+		font-weight: normal;
+		font-size: 30px;
+		@media screen and (max-width:767px) {
+			font-size: 24px;
+		}
+	}
+}
+.article-title{
+	color: $color-main;
+	text-decoration: none;
+}
+
+.article-meta{
+	margin-top: 10px;
+	overflow:hidden;
+}
+.article-date{
+	display: block;
+	float: left;
+	color: #757575;
+	text-decoration: none;
+}
+.article-tag-list{
+	margin:0;
+	float: right;
+	padding-left: 0;
+	list-style:none;
+}
+.article-tag-list-item{
+	float: left;
+	margin-left: 5px;
+	a{
+		color: #757575;
+		text-decoration: none;
+	}
+}
+
+.article-entry{
+  color: #3c474c;
+  padding: 10px 0;
+  p, table{
+  	line-height: 1.8;
+    margin: 0.5em 0;
+  }
+
+  h1, h2, h3, h4, h5, h6{
+  	font-weight: bold;
+  	margin: 1em 0;
+  }
+
+  a{
+  	color: $link-green;
+    text-decoration: none;
+    &:hover{
+      text-decoration: underline;
+    }
+  }
+
+  ul, ol, dl{
+  	margin: 10px 0;
+  }
+
+  img, video{
+  	max-width: 100%;
+    height: auto;
+    display: block;
+    margin: auto;
+  }
+    
+  iframe{
+  	border: none;
+  }
+    
+  table{
+  	width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+    
+  th{
+  	font-weight: bold;
+    border-bottom: 3px solid #ddd;
+    padding-bottom: 0.5em;
+  }
+    
+  td{
+  	border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+  }
+    
+   blockquote{
+    font-family: sans-serif;
+    font-size: 1.2em;
+    margin: 5px 20px;
+    text-align: center;
+    footer{
+      font-size: 14px;
+      margin: 10px 0;
+      font-family: sans-serif;
+      cite{
+      	&:before{
+      	  content: "-";
+          padding: 0 0.5em;
+      	}  
+      }	
+    }
+   }
+}
+
+.article-more-link{
+	a {
+		display: inline-block;
+		color: $color-main;
+		text-decoration: none;
+		border: 1px solid $color-main;
+		padding: 5px 20px;
+		border-radius: 5px;
+		transition: all .3s;
+		-webkit-transition: all .3s;
+		&:hover,&:active {
+      		background: $color-main;
+      		color: #fff;
+			text-decoration: none;
+		}
+	}
+}
+
+.article-footer{
+	height:25px;
+	line-height:1;
+}
+
+/* newer and older */
+#article-nav{
+	background-color: $color-main-opacity;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	a{
+		display: block;
+		text-decoration: none;
+		color: #fff;
+		text-align: center;
+	}
+}
+.article-nav-caption{
+	display:block;
+	height:28px;
+	line-height: 28px;
+  text-transform: uppercase;
+}
+

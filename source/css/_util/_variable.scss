@@ -1,0 +1,45 @@
+$small-width: 720px;
+$middle-width: 960px;
+$big-width: 1140px;
+
+$cw: 20px;
+
+$pdw: 10px;
+
+$unit: 6.2056333%;
+$gutter: 2.1277%;
+$n: 12;
+
+//color
+$color-main: #607D8B;
+$color-main-opacity: rgba(96,125,139,.6);
+$color-border: #ddd; 
+$link-green: #4caf50;
+
+
+// Fonts
+$font-sans : "open sans", "Helvetica Neue", "Microsoft Yahei", Helvetica, Arial, sans-serif;
+$font-serif : Georgia, "Times New Roman", serif;
+$font-mono : "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace;
+$font-icon : FontAwesome;
+$fa-font-path : "fonts/";
+$fa-version : "4.7.0";
+$font-size : 14px;
+
+
+/*mixin*/
+
+@mixin clearfix {
+  zoom: 1;
+  &:before,
+  &:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    overflow: hidden;
+  }
+
+  &:after {
+    clear: both;
+  }
+}

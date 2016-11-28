@@ -1,0 +1,143 @@
+a {
+	outline: none;
+}
+
+.head-wrap {
+	background-color: $color-main;
+}
+
+.navwrap {
+	overflow: hidden;
+}
+
+.site-title {
+	height: 50px;
+	line-height: 50px;
+	margin: 0;
+	float: left;
+	font-weight: normal;
+	font-size: 20px;
+	@media screen and (max-width:767px) {
+		font-size: 18px;
+	}
+	a{
+		color: #fff;
+		text-decoration: none;
+		font-weight: normal;
+	}
+}
+
+#mobile-btn {
+	padding:0;
+	margin-top:2px;
+	height:46px;
+	width:46px;
+	float: right;
+	border: 0;
+	background: $color-main;
+	border-radius: 100%;
+	transition: background-color .3s;
+	-webkit-transition: background-color .3s;
+	display: none;
+	outline: none;
+}
+
+@media screen and (max-width:767px) {
+	#mobile-btn {
+		display: block;
+	}
+	.main-nav {
+		display: none;
+	}
+}
+
+#mobile-btn:active {
+	background-color: rgba(255, 255, 255, 0.1);
+}
+
+#mobile-btn span {
+	display: block;
+	height: 3px;
+	width: 24px;
+	margin: 3px 11px;
+	background-color: #fff;
+}
+
+.main-nav {
+	margin: 0;
+	padding: 0;
+	float: right;
+	overflow: hidden;
+	list-style: none;
+}
+
+.main-nav li {
+	float: left;
+}
+
+.main-nav a {
+	display: block;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 15px;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+}
+
+#mobile-nav {
+	overflow: hidden;
+	margin-left: -10px;
+	margin-right: -10px;
+	transition: all .5s;
+	-webkit-transition: all .5s;
+	background: rgba(255, 255, 255, 0.1);
+}
+
+#mobile-nav ul {
+	list-style: none;
+	margin: 0;
+	padding: 5px 0;
+}
+
+#mobile-nav a {
+	display: block;
+	line-height: 30px;
+	height: 30px;
+	padding-left: 20px;
+	letter-spacing: 5px;
+	color: #fff;
+	text-decoration: none;
+	transition: background-color .5s;
+	-webkit-transition: background-color .5s;
+	font-family: $font-serif;
+}
+
+#mobile-nav a:active {
+	background-color: $color-main;
+}
+
+
+/* banner */
+.banner-wrap {
+	background: $color-main;
+	padding: 50px 0;
+	@media screen and (max-width:767px) {
+		padding: 25px 0;
+	}
+}
+
+.banner-center{
+	text-align: center;
+	h2{
+		font-weight: normal;
+		color: #fff;
+		text-shadow: 0 0 2px rgba(0, 0, 0, .2);
+	}
+	p{
+		color: #fff;
+		line-height: 1.8;
+		font-family: $font-serif;
+		padding: 0 5%;
+	}
+}
