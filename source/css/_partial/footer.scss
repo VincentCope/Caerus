@@ -17,3 +17,26 @@
 .footer-wrap p a:hover{
 	text-decoration: underline;
 }
+
+/* back to top */
+.backtop{
+	position: fixed;
+	bottom:60px;
+	right:10px;
+	display: none;
+	height:50px;
+	width:50px;
+	background-color: $color-main;
+	border-radius:3px;
+	text-align:center;
+	z-index:999;
+	opacity: 0.9;
+	i{
+		display: block;
+		height:50px;
+		width:50px;
+		line-height: 50px;
+		color: #fff;
+		font-size: 20px;
+	}
+}

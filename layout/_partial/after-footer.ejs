@@ -13,7 +13,7 @@
   })();
 </script>
 <% } %>
-<script src="https://cdn.staticfile.org/jquery/2.2.1/jquery.min.js"></script>
+<%- js('js/jquery1.12.4.js') %>
 <script type="text/javascript">
   window.onload = function () {
     var mobileBtn = document.getElementById('mobile-btn');
@@ -26,6 +26,23 @@
       }
     }
   }
+
+  $(function () {
+    $(window).on("scroll",function () {
+      if ($(document).scrollTop() >= ($(window).height()/2)){
+        $(".backtop").css("display","block").fadeIn();
+      } else {
+        $(".backtop").css("display","none").fadeOut();
+      }
+    })
+
+    $(".backtop").on("click",function () {
+      $('html,body').animate({
+        scrollTop: 0
+      },500)
+    })
+  })
+
 </script>
 
 <% if (theme.fancybox){ %>

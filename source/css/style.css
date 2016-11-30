@@ -368,7 +368,7 @@ a {
   margin: 0;
   float: left;
   font-weight: normal;
-  font-size: 24px; }
+  font-size: 20px; }
   @media screen and (max-width: 767px) {
     .site-title {
       font-size: 18px; } }
@@ -861,6 +861,26 @@ pre .javascript, pre .function {
 
 .footer-wrap p a:hover {
   text-decoration: underline; }
+
+/* back to top */
+.backtop {
+  position: fixed;
+  bottom: 60px;
+  right: 10px;
+  display: none;
+  height: 50px;
+  width: 50px;
+  background-color: #607D8B;
+  border-radius: 3px;
+  text-align: center;
+  z-index: 999; }
+  .backtop i {
+    display: block;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    color: #fff;
+    font-size: 20px; }
 
 .widget-wrap {
   margin-bottom: 15px; }
