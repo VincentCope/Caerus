@@ -425,6 +425,8 @@ a {
   text-align: center;
   text-decoration: none;
   color: #fff; }
+  .main-nav a:hover {
+    background-color: #5b7582; }
 
 #mobile-nav {
   overflow: hidden;
@@ -475,10 +477,10 @@ a {
     padding: 0 5%; }
 
 #main {
-  margin-top: 20px; }
+  margin-top: 30px; }
   @media screen and (max-width: 767px) {
     #main {
-      margin-top: 10px; } }
+      margin-top: 20px; } }
 
 .article-type-post {
   margin-bottom: 20px; }
@@ -534,6 +536,8 @@ a {
       text-decoration: underline; }
   .article-entry ul, .article-entry ol, .article-entry dl {
     margin: 10px 0; }
+    .article-entry ul li, .article-entry ol li, .article-entry dl li {
+      line-height: 1.8; }
   .article-entry img, .article-entry video {
     max-width: 100%;
     height: auto;
@@ -586,8 +590,8 @@ a {
 /* newer and older */
 #article-nav {
   background-color: rgba(96, 125, 139, 0.6);
-  padding-top: 5px;
-  padding-bottom: 5px; }
+  padding-top: 10px;
+  padding-bottom: 15px; }
   #article-nav a {
     display: block;
     text-decoration: none;
@@ -600,12 +604,16 @@ a {
   line-height: 28px;
   text-transform: uppercase; }
 
+#comments {
+  margin-top: 15px; }
+
 .article-entry pre, .article-entry code {
   font-family: "Source Code Pro", Consolas, Monaco, Menlo, Consolas, monospace; }
 .article-entry code {
   background: #ddd;
-  text-shadow: 0 1px #fff;
-  padding: 0 0.3em; }
+  padding: 0 0.3em;
+  border-radius: 0.3em;
+  margin: 0 0.3em; }
 .article-entry pre {
   background: #2d2d2d;
   margin: 0 -10px;
@@ -873,7 +881,8 @@ pre .javascript, pre .function {
   background-color: #607D8B;
   border-radius: 3px;
   text-align: center;
-  z-index: 999; }
+  z-index: 999;
+  opacity: 0.9; }
   .backtop i {
     display: block;
     height: 50px;

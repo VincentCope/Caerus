@@ -1,7 +1,7 @@
 #main{
-	margin-top:20px;
+	margin-top:30px;
 	@media screen and (max-width:767px) {
-		margin-top: 10px;
+		margin-top: 20px;
 	}
 }
 .article-type-post{
@@ -70,6 +70,9 @@
 
   ul, ol, dl{
   	margin: 10px 0;
+    li{
+      line-height: 1.8;
+    }
   }
 
   img, video{
@@ -145,8 +148,8 @@
 /* newer and older */
 #article-nav{
 	background-color: $color-main-opacity;
-	padding-top: 5px;
-	padding-bottom: 5px;
+	padding-top: 10px;
+	padding-bottom: 15px;
 	a{
 		display: block;
 		text-decoration: none;
@@ -161,3 +164,6 @@
   text-transform: uppercase;
 }
 
+#comments{
+  margin-top: 15px;
+}

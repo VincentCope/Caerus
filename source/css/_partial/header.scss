@@ -83,6 +83,9 @@ a {
 	text-align: center;
 	text-decoration: none;
 	color: #fff;
+	&:hover{
+		background-color: #5b7582;
+	}
 }
 
 #mobile-nav {
