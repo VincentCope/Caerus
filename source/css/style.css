@@ -357,7 +357,12 @@ a {
   outline: none; }
 
 .head-wrap {
-  background-color: #607D8B; }
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9); }
 
 .navwrap {
   overflow: hidden; }
@@ -373,9 +378,9 @@ a {
     .site-title {
       font-size: 18px; } }
   .site-title a {
-    color: #fff;
+    color: #000;
     text-decoration: none;
-    font-weight: normal; }
+    font-weight: bold; }
 
 #mobile-btn {
   padding: 0;
@@ -384,7 +389,7 @@ a {
   width: 46px;
   float: right;
   border: 0;
-  background: #607D8B;
+  background: transparent;
   border-radius: 100%;
   transition: background-color .3s;
   -webkit-transition: background-color .3s;
@@ -398,14 +403,14 @@ a {
   .main-nav {
     display: none; } }
 #mobile-btn:active {
-  background-color: rgba(255, 255, 255, 0.1); }
+  background-color: rgba(112, 138, 151, 0.3); }
 
 #mobile-btn span {
   display: block;
   height: 3px;
   width: 24px;
   margin: 3px 11px;
-  background-color: #fff; }
+  background-color: #000; }
 
 .main-nav {
   margin: 0;
@@ -424,9 +429,10 @@ a {
   padding: 0 15px;
   text-align: center;
   text-decoration: none;
-  color: #fff; }
+  color: #000;
+  font-weight: bold; }
   .main-nav a:hover {
-    background-color: #5b7582; }
+    color: #607D8B; }
 
 #mobile-nav {
   overflow: hidden;
@@ -439,7 +445,7 @@ a {
 #mobile-nav ul {
   list-style: none;
   margin: 0;
-  padding: 5px 0; }
+  padding: 0 0 5px 0; }
 
 #mobile-nav a {
   display: block;
@@ -447,22 +453,30 @@ a {
   height: 30px;
   padding-left: 20px;
   letter-spacing: 5px;
-  color: #fff;
+  color: #000;
+  font-weight: bold;
   text-decoration: none;
   transition: background-color .5s;
   -webkit-transition: background-color .5s;
   font-family: Georgia, "Times New Roman", serif; }
 
-#mobile-nav a:active {
-  background-color: #607D8B; }
-
+/* #mobile-nav a:active {
+	background-color: $color-main;
+} */
 /* banner */
 .banner-wrap {
-  background: #607D8B;
-  padding: 50px 0; }
+  background-color: #f1f1f1;
+  background-image: url(images/m.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 200px 0;
+  box-shadow: 0 1px 6px rgba(112, 138, 150, 0.3) inset;
+  margin-bottom: 15px; }
   @media screen and (max-width: 767px) {
     .banner-wrap {
-      padding: 25px 0; } }
+      padding: 150px 0;
+      margin-bottom: 0; } }
 
 .banner-center {
   text-align: center; }
@@ -475,6 +489,12 @@ a {
     line-height: 1.8;
     font-family: Georgia, "Times New Roman", serif;
     padding: 0 5%; }
+
+.container {
+  margin-bottom: 30px; }
+  @media screen and (max-width: 767px) {
+    .container {
+      margin-bottom: 0; } }
 
 #main {
   margin-top: 30px; }
