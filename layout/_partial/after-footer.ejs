@@ -18,12 +18,16 @@
   window.onload = function () {
     var mobileBtn = document.getElementById('mobile-btn');
     var mobileNav = document.getElementById('mobile-nav');
-    mobileBtn.onclick = function () {
+    mobileBtn.onclick = function (event) {
       if (mobileNav.style.height === '0px'){
         mobileNav.style.height = '160px';
+        event.stopPropagation();
       } else {
         mobileNav.style.height = '0px';
       }
+    }
+    document.onclick = function () {
+      mobileNav.style.height = '0px';
     }
   }
 
@@ -34,7 +38,14 @@
       } else {
         $(".backtop").css("display","none").fadeOut();
       }
-    })
+      
+      if ($(document).scrollTop() >= 150 ){
+        $(".head-wrap").css("position","fixed");
+      } else {
+        $(".head-wrap").css("position","absolute");
+      }
+
+    });
 
     $(".backtop").on("click",function () {
       $('html,body').animate({
